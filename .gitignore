@@ -1,0 +1,11 @@
+# Default ignored files
+/shelf/
+/.idea/
+/out
+AssemblerTokenizer.class
+Assembler.class
+FileOperator.class
+main.class
+Tokenizer.class
+Simulator.class
+Simulator$stateStruct.class
