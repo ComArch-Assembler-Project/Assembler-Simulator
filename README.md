@@ -7,7 +7,7 @@
 - Run 
   - java main (Assembler)
   - java Simulator Output/Name.txt (Simulator)
-  - 
+  
 ### status
   - [x] R-type
   - [x] I-type
