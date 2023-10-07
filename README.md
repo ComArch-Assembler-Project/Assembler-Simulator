@@ -1,5 +1,13 @@
 # Assembler
+### starter command for terminal
+- Compile java file 
+  - javac Simulator.java
+  - javac Main.java
 
+- Run 
+  - java main (Assembler)
+  - java Simulator Output/Name.txt (Simulator)
+  - 
 ### status
   - [x] R-type
   - [x] I-type
