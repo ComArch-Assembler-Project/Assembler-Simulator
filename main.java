@@ -18,7 +18,7 @@ public class main {
     };
 
     static String[] inputFile = {
-            "TEST" , "TEST1"
+            "TEST" , "COMBINATION" , "MULTIPLIER" , "SUM"
     };
     public static void main(String[] args) {
         System.out.print("Select Files [ " + Arrays.toString(inputFile) + " ] (1-"+ inputFile.length + ") : " );
@@ -45,7 +45,7 @@ public class main {
         List<String> binaryCodes = Encoder.computeToMachineCode();
         List<String> decimalCodes = Assembler.binaryToDecimal(binaryCodes);
 
-        FileOperator.StringToFile(Output_path + File + outExtension[0], binaryCodes);
+    //  FileOperator.StringToFile(Output_path + File + outExtension[0], binaryCodes);
         FileOperator.StringToFile(Output_path + File + outExtension[1],  decimalCodes);
     }
 

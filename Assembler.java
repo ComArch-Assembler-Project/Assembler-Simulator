@@ -244,18 +244,18 @@ public class Assembler {
         machineCode = "";
         String value = Data_list.get(1 + index); // next field value
 
-        if(isInteger(value)){       // Integer State
+        if(isInteger(value)){           // Integer State
             int integer = toInteger(value);
             String binary;
             if(integer >= 0) {
                 binary = toBinaryString(integer);
                 machineCode = addZeroBits(binary,32);
-            } else {                // value < 0 then need to do 2's compliment!!!
+            } else {                    // value < 0 then need to do 2's compliment!!!
                 binary = toBinaryString(-integer);
                 binary = addZeroBits(binary,32);
                 machineCode = twosCompliment(binary);
             }
-        } else if(isLabel(value)) { // Label State
+        } else if(isLabel(value)) {     // Label State
             int integer = Label_Mapping.get(value);
             String binary = toBinaryString(integer);
             machineCode = addZeroBits(binary,32);

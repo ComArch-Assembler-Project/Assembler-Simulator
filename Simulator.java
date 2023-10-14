@@ -5,7 +5,7 @@ import java.io.IOException;
 public class Simulator {
     private static final int NUMMEMORY = 65536; // maximum number of words in memory
     private static final int NUMREGS = 8; // number of machine registers
-    private static final int MAXLINELENGTH = 1000;
+    private static final int MAXLINELENGTH = 5000; // for testing default is 1000
 
     public static class stateStruct {
         int pc;
@@ -70,7 +70,7 @@ public class Simulator {
             System.exit(1);
         }
 
-        //ตาต้าทำเอง ไม่น่าได้ใช้ละ
+
         String binaryString = Integer.toBinaryString(state.mem[0]);
         int originalNumber = Integer.parseInt(binaryString, 2);
         int extractedBits = (originalNumber >> 21) & 0b111;

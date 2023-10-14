@@ -6,7 +6,7 @@ public class FunctionTest {
 
     static String inputDIR = "Input/";
     static String fileExtension = ".s";
-    static String File = "TEST1";
+    static String File = "TEST";
     static String InputString = FileOperator.FileToString(inputDIR + File + fileExtension);
 
     Assembler as = new Assembler(InputString);
