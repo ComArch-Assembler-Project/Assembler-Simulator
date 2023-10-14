@@ -116,6 +116,15 @@
 - O-type : halt , noop
   - no field          -> (0 field)
   - List of machineCodes = 0000000000000000000000 (22-bits)
+- F-type : .fill
+  - no field -> (0 field)
+  - check first index is label or integer
+	- integer
+		- if it positive value just turn into binarycode
+		- if ii negative value then de-negative it and turn to binary with 2’s complement method
+	- label
+		- get value by labelmapping then turn into binarycode
+
 
 ### Opcode table foreach type
 
