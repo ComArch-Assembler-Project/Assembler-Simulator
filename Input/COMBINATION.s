@@ -45,7 +45,7 @@ pop     add     6       4       4 			; -- stack
         jalr    5       6 				    ; return result
         beq     0       0       done        ; halt
 
-addone  lw      0       6       pos1  		; reg6 = 1(reset register7)
+addone  lw      0       6       pos1  		; reg6 = 1
         add     0       6       3 			; reg3 += 1
         jalr    5       6 			        ; return result
 
