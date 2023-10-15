@@ -1,6 +1,7 @@
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FunctionTest {
 
@@ -12,51 +13,51 @@ public class FunctionTest {
     Assembler as = new Assembler(InputString);
     @Test
     public void AddZeroBitsTest(){
-        Assert.assertEquals("0001" , Assembler.addZeroBits("1",4));
-        Assert.assertEquals("0011" , Assembler.addZeroBits("11",4));
-        Assert.assertEquals("0111" , Assembler.addZeroBits("111",4));
-        Assert.assertEquals("1111" , Assembler.addZeroBits("1111",4));
+        assertEquals("0001" , Assembler.addZeroBits("1",4));
+        assertEquals("0011" , Assembler.addZeroBits("11",4));
+        assertEquals("0111" , Assembler.addZeroBits("111",4));
+        assertEquals("1111" , Assembler.addZeroBits("1111",4));
     }
 
     @Test
     public void isIntegerTest(){
-        Assert.assertTrue(Assembler.isInteger("123"));
-        Assert.assertFalse(Assembler.isInteger("ABC"));
+        assertTrue(Assembler.isInteger("123"));
+        assertFalse(Assembler.isInteger("ABC"));
     }
 
     @Test
     public void toIntegerTest(){
-        Assert.assertEquals(123,Assembler.toInteger("123"));
+        assertEquals(123,Assembler.toInteger("123"));
     }
 
     @Test
     public void twoComplimentTest(){
         // 1 to -1
-        Assert.assertEquals("1111111111111111", Assembler.twosCompliment("0000000000000001"));
+        assertEquals("1111111111111111", Assembler.twosCompliment("0000000000000001"));
         // 10 to -10
-        Assert.assertEquals("1111111111110110", Assembler.twosCompliment("0000000000001010"));
+        assertEquals("1111111111110110", Assembler.twosCompliment("0000000000001010"));
 
         // reverse!!!
         // -1 to 1
-        Assert.assertEquals("0000000000000001", Assembler.twosCompliment("1111111111111111"));
+        assertEquals("0000000000000001", Assembler.twosCompliment("1111111111111111"));
     }
 
     @Test
     public void isInstructionTest(){
 //        System.out.println(Assembler.);
-        Assert.assertTrue(Assembler.isInstruction("add"));
-        Assert.assertTrue(Assembler.isInstruction("nand"));
-        Assert.assertTrue(Assembler.isInstruction("lw"));
-        Assert.assertTrue(Assembler.isInstruction("sw"));
-        Assert.assertTrue(Assembler.isInstruction("beq"));
-        Assert.assertTrue(Assembler.isInstruction("jalr"));
-        Assert.assertTrue(Assembler.isInstruction("noop"));
-        Assert.assertTrue(Assembler.isInstruction("halt"));
-        Assert.assertTrue(Assembler.isInstruction(".fill"));
+        assertTrue(Assembler.isInstruction("add"));
+        assertTrue(Assembler.isInstruction("nand"));
+        assertTrue(Assembler.isInstruction("lw"));
+        assertTrue(Assembler.isInstruction("sw"));
+        assertTrue(Assembler.isInstruction("beq"));
+        assertTrue(Assembler.isInstruction("jalr"));
+        assertTrue(Assembler.isInstruction("noop"));
+        assertTrue(Assembler.isInstruction("halt"));
+        assertTrue(Assembler.isInstruction(".fill"));
 
-        Assert.assertFalse(Assembler.isInstruction("mul"));
-        Assert.assertFalse(Assembler.isInstruction("sub"));
-        Assert.assertFalse(Assembler.isInstruction("div"));
+        assertFalse(Assembler.isInstruction("mul"));
+        assertFalse(Assembler.isInstruction("sub"));
+        assertFalse(Assembler.isInstruction("div"));
     }
 
     @Test
@@ -76,8 +77,8 @@ public class FunctionTest {
         System.out.println(bin);
         System.out.println(dec);
 
-        Assert.assertEquals(dec, Assembler.binaryToDecimal(bin));
-        Assert.assertEquals(bin, Assembler.decimalToBinary(dec));
+        assertEquals(dec, Assembler.binaryToDecimal(bin));
+        assertEquals(bin, Assembler.decimalToBinary(dec));
     }
 
 }

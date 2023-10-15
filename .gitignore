@@ -1,7 +1,7 @@
 # Default ignored files
-/shelf/
 /.idea/
-/out
+/compile
+/Assembler-Simulator.iml
 AssemblerTokenizer.class
 Assembler.class
 FileOperator.class
