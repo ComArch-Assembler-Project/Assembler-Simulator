@@ -7,11 +7,11 @@
 check   nand    3       4       7           # reg7 = !(reg3 & reg4) (NAND operation)
         nand    7       7       7           # reg7 = !reg7 (NAND operation with itself)
         beq     7       1       plus        # If reg7 is 1 (means reg2 is set), go to plus
-        beq     7       0       mult        # If reg7 is 0 (means reg2 is not set), go to loop2
+        beq     7       0       shift       # If reg7 is 0 (means reg2 is not set), go to loop2
 
 plus    add     1       2       1           # reg1 = reg1 + reg2 (accumulate mc)
 
-mult    add     2       2       2           # reg2 = reg2 + reg2 (left shift mc)
+shift   add     2       2       2           # reg2 = reg2 + reg2 (left shift mc)
         add     4       4       4           # reg4 = reg4 + reg4 (left shift pos1)
         add     6       5       6           # reg6 = reg6 - 1 (decrement exit counter)
         beq     6       0       end         # If reg6 is 0, go to end

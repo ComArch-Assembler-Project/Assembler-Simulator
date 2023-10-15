@@ -11,6 +11,7 @@ public class FunctionTest {
     static String InputString = FileOperator.FileToString(inputDIR + File + fileExtension);
 
     Assembler as = new Assembler(InputString);
+
     @Test
     public void AddZeroBitsTest(){
         assertEquals("0001" , Assembler.addZeroBits("1",4));

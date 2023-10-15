@@ -80,25 +80,6 @@
     - LabelValidation(String)    -> check Label is in correct form
 ```
 
-- The regular expression `^-\d+(\.\d+)?$` is designed to match numeric values, both integer and decimal, with an optional negative sign.
-
-- `^`: Matches the start of a string.
-- `-?`: Matches an optional minus sign (`-`). The `?` means zero or one occurrence.
-- `\d+`: Matches one or more digits. `\d` represents a digit (0-9).
-- `(\.\d+)?`: This is an optional group (`(...)?`) that matches a dot followed by one or more digits. This represents the decimal part of a number.
-  - `\.`: Matches a literal dot.
-  - `\d+`: Matches one or more digits after the dot.
-- `$`: Matches the end of a string.
-
-#### Example regular expression
-
-- "42"
-- "-3.14"
-- "0.123"
-- "-1000"
-- "1000.00"
-
-
 ### Format : label instruction field[0] field[1] field[2] comments
 
 - R-type : add , nand 

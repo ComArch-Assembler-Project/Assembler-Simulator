@@ -34,7 +34,7 @@ public class main {
         compute(inputFile[i]);
 
         // show output
-        print(inputFile[i] , outExtension[0]);
+        // print(inputFile[i] , outExtension[0]);
         print(inputFile[i] , outExtension[1]);
     }
     public static void compute(String File){
