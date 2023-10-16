@@ -24,4 +24,4 @@ mc      .fill   32766                       # Multiplicand value (32766)
 mp      .fill   10383                       # Multiplier value (10383)
 pos1    .fill   1                           # Positive 1
 neg1    .fill   -1                          # Negative 1
-count   .fill   14                          # counter
+count   .fill   15                          # counter
